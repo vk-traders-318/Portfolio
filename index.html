@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vivek Kumar | Developer Portfolio</title>
+
+<meta name="description" content="Official portfolio website of Vivek Kumar. Web developer creating tools, websites and projects.">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+
+<link rel="icon" href="assets/icons/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<div class="container nav-container">
+
+<div class="logo">
+<a href="index.html">Vivek.dev</a>
+</div>
+
+<nav>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="projects.html">Projects</a></li>
+
+<li><a href="blog.html">Blog</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<div class="menu-toggle" id="menuToggle">
+
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+</div>
+
+</header>
+
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="container hero-container">
+
+<div class="hero-left">
+
+<h1 id="heroName">Hi, I'm Vivek Kumar</h1>
+
+<h2 class="hero-title">Web Developer & Tech Creator</h2>
+
+<p id="heroBio">
+
+I build websites, tools and modern web apps using HTML, CSS, JavaScript and Firebase.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="projects.html" class="btn primary-btn">View Projects</a>
+
+<a href="contact.html" class="btn secondary-btn">Contact Me</a>
+
+</div>
+
+<div class="social-links">
+
+<a id="githubLink" target="_blank">GitHub</a>
+
+<a id="instagramLink" target="_blank">Instagram</a>
+
+<a id="linkedinLink" target="_blank">LinkedIn</a>
+
+</div>
+
+</div>
+
+
+
+<div class="hero-right">
+
+<img id="profileImage" src="assets/images/profile.jpg" alt="Profile">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- SKILLS SECTION -->
+
+<section class="skills">
+
+<div class="container">
+
+<h2 class="section-title">My Skills</h2>
+
+<div class="skills-grid" id="skillsContainer">
+
+<!-- skills loaded from firebase -->
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PROJECTS PREVIEW -->
+
+<section class="projects-preview">
+
+<div class="container">
+
+<h2 class="section-title">Featured Projects</h2>
+
+<div class="projects-grid" id="featuredProjects">
+
+<!-- projects loaded dynamically -->
+
+</div>
+
+<div class="center">
+
+<a href="projects.html" class="btn primary-btn">View All Projects</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- BLOG PREVIEW -->
+
+<section class="blog-preview">
+
+<div class="container">
+
+<h2 class="section-title">Latest Blog Posts</h2>
+
+<div class="blog-grid" id="latestBlogs">
+
+<!-- blogs loaded dynamically -->
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- STATS SECTION -->
+
+<section class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat-card">
+
+<h3 id="projectCount">0</h3>
+
+<p>Projects Built</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3 id="websiteCount">0</h3>
+
+<p>Websites Created</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3 id="visitorCount">0</h3>
+
+<p>Total Visitors</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container cta-container">
+
+<h2>Let's Build Something Amazing</h2>
+
+<p>If you have a project idea or want to collaborate, feel free to contact me.</p>
+
+<a href="contact.html" class="btn primary-btn">Get In Touch</a>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="container footer-container">
+
+<p>© 2026 Vivek Kumar. All rights reserved.</p>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+
+<a href="projects.html">Projects</a>
+
+<a href="blog.html">Blog</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+</footer>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+<script src="js/firebase-config.js"></script>
+
+<script src="js/main.js"></script>
+
+<script src="js/projects.js"></script>
+
+<script src="js/blog.js"></script>
+
+
+
+</body>
+
+</html>

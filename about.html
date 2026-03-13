@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About | Vivek Kumar</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+
+<link rel="icon" href="assets/icons/favicon.png">
+
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<div class="container nav-container">
+
+<div class="logo">
+<a href="index.html">Vivek.dev</a>
+</div>
+
+<nav>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="projects.html">Projects</a></li>
+
+<li><a href="blog.html">Blog</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<div class="menu-toggle" id="menuToggle">
+
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+</div>
+
+</header>
+
+
+
+<!-- ABOUT HERO -->
+
+<section class="hero">
+
+<div class="container hero-container">
+
+<div class="hero-left">
+
+<h1>About Me</h1>
+
+<p id="aboutBio">
+
+Loading about information...
+
+</p>
+
+<div class="social-links">
+
+<a id="githubLink" target="_blank">GitHub</a>
+
+<a id="instagramLink" target="_blank">Instagram</a>
+
+<a id="linkedinLink" target="_blank">LinkedIn</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-right">
+
+<img id="profileImage" src="assets/images/profile-placeholder.png">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- SKILLS SECTION -->
+
+<section class="skills">
+
+<div class="container">
+
+<h2 class="section-title">My Skills</h2>
+
+<div class="skills-grid" id="skillsContainer">
+
+<!-- Skills load from Firebase -->
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- JOURNEY SECTION -->
+
+<section class="projects-preview">
+
+<div class="container">
+
+<h2 class="section-title">My Journey</h2>
+
+<div class="card">
+
+<p>
+
+I am a passionate web developer who enjoys building tools,
+websites and modern web applications.
+
+I started learning web development with HTML, CSS and JavaScript
+and gradually moved into building real projects using Firebase.
+
+I focus on creating useful tools, SaaS platforms and developer projects.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container cta-container">
+
+<h2>Want to work with me?</h2>
+
+<p>
+
+If you have a project idea or want to collaborate,
+feel free to reach out.
+
+</p>
+
+<a href="contact.html" class="btn primary-btn">Contact Me</a>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="container footer-container">
+
+<p>© 2026 Vivek Kumar. All rights reserved.</p>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+
+<a href="projects.html">Projects</a>
+
+<a href="blog.html">Blog</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+</footer>
+
+
+
+<!-- FIREBASE SCRIPTS -->
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+
+<script src="js/firebase-config.js"></script>
+<script src="js/main.js"></script>
+
+
+<script>
+
+/* LOAD ABOUT BIO */
+
+async function loadAbout(){
+
+const bio = document.getElementById("aboutBio");
+
+try{
+
+const doc = await profileRef.doc("main").get();
+
+if(doc.exists){
+
+const data = doc.data();
+
+bio.textContent = data.bio;
+
+}
+
+}catch(error){
+
+console.error("About load error",error);
+
+}
+
+}
+
+document.addEventListener("DOMContentLoaded",loadAbout);
+
+</script>
+
+
+</body>
+
+</html>
