@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Projects</title>
+
+<link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+<div class="admin-container">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h2>Admin Panel</h2>
+
+<ul>
+
+<li><a href="dashboard.html">Dashboard</a></li>
+
+<li><a href="projects.html">Projects</a></li>
+
+<li><a href="blogs.html">Blogs</a></li>
+
+<li><a href="profile.html">Profile</a></li>
+
+<li><a href="messages.html">Messages</a></li>
+
+<li><a href="#" id="logoutBtn">Logout</a></li>
+
+</ul>
+
+</div>
+
+
+<!-- MAIN CONTENT -->
+
+<div class="admin-main">
+
+<h1>Projects</h1>
+
+<br>
+
+<button class="admin-btn btn-add" id="addProjectBtn">
+Add Project
+</button>
+
+
+<!-- PROJECT FORM -->
+
+<div id="projectFormContainer" style="display:none;">
+
+<form id="projectForm" class="admin-form">
+
+<input type="text" id="projectTitle" placeholder="Project Title" required>
+
+<textarea id="projectDescription" placeholder="Project Description" required></textarea>
+
+<input type="url" id="projectLiveLink" placeholder="Live Link">
+
+<input type="url" id="projectGithubLink" placeholder="GitHub Link">
+
+<input type="file" id="projectImage">
+
+<button type="submit">Save Project</button>
+
+</form>
+
+</div>
+
+
+<br>
+
+<!-- PROJECT LIST -->
+
+<table class="admin-table">
+
+<thead>
+
+<tr>
+
+<th>Title</th>
+<th>Live</th>
+<th>GitHub</th>
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="projectsTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+
+<!-- FIREBASE -->
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+
+<script src="js/firebase-config.js"></script>
+<script src="js/admin-auth.js"></script>
+<script src="js/admin-projects.js"></script>
+
+</body>
+
+</html>
