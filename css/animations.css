@@ -1,0 +1,273 @@
+/* ================================
+FADE IN ANIMATION
+================================ */
+
+.fade-in{
+
+opacity:0;
+transform:translateY(20px);
+animation:fadeIn 0.8s ease forwards;
+
+}
+
+@keyframes fadeIn{
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+
+/* ================================
+SLIDE UP
+================================ */
+
+.slide-up{
+
+opacity:0;
+transform:translateY(40px);
+animation:slideUp 0.8s ease forwards;
+
+}
+
+@keyframes slideUp{
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+
+/* ================================
+SLIDE LEFT
+================================ */
+
+.slide-left{
+
+opacity:0;
+transform:translateX(40px);
+animation:slideLeft 0.8s ease forwards;
+
+}
+
+@keyframes slideLeft{
+
+to{
+
+opacity:1;
+transform:translateX(0);
+
+}
+
+}
+
+
+/* ================================
+SLIDE RIGHT
+================================ */
+
+.slide-right{
+
+opacity:0;
+transform:translateX(-40px);
+animation:slideRight 0.8s ease forwards;
+
+}
+
+@keyframes slideRight{
+
+to{
+
+opacity:1;
+transform:translateX(0);
+
+}
+
+}
+
+
+/* ================================
+HOVER SCALE
+================================ */
+
+.hover-scale{
+
+transition:0.3s;
+
+}
+
+.hover-scale:hover{
+
+transform:scale(1.05);
+
+}
+
+
+/* ================================
+HOVER FLOAT
+================================ */
+
+.hover-float{
+
+transition:0.3s;
+
+}
+
+.hover-float:hover{
+
+transform:translateY(-6px);
+
+}
+
+
+/* ================================
+BUTTON RIPPLE EFFECT
+================================ */
+
+.btn{
+
+position:relative;
+overflow:hidden;
+
+}
+
+.btn::after{
+
+content:"";
+
+position:absolute;
+
+width:0;
+height:0;
+
+border-radius:50%;
+
+background:rgba(255,255,255,0.3);
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+transition:0.5s;
+
+}
+
+.btn:active::after{
+
+width:200%;
+height:200%;
+
+}
+
+
+/* ================================
+LOADING PULSE
+================================ */
+
+.pulse{
+
+animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+opacity:1;
+
+}
+
+50%{
+
+opacity:0.5;
+
+}
+
+100%{
+
+opacity:1;
+
+}
+
+}
+
+
+/* ================================
+SPIN
+================================ */
+
+.spin{
+
+animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+0%{
+
+transform:rotate(0deg);
+
+}
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+
+/* ================================
+BOUNCE
+================================ */
+
+.bounce{
+
+animation:bounce 1s infinite;
+
+}
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+}
+
+
+/* ================================
+HOVER GLOW
+================================ */
+
+.hover-glow{
+
+transition:0.3s;
+
+}
+
+.hover-glow:hover{
+
+box-shadow:0 0 15px #3b82f6;
+
+}
